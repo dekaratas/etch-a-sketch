@@ -5,7 +5,7 @@ console.log("Script loaded");
 let gridSize = 16;
 const myBody = document.querySelector("body");
 const changeGrid = document.querySelector("#sizeBtn");
-const theGrid = document.createElement("div");
+
 
 
 
@@ -13,10 +13,8 @@ const theGrid = document.createElement("div");
 makeGrid(gridSize);
 
 
-function makeGrid(size) {
-	
-	
-	console.log("New grid made");
+function makeGrid(size) {	
+	let theGrid = document.createElement("div");
 	theGrid.setAttribute("class", "myGrid");
 	theGrid.style.gridTemplateColumns = `repeat(${size}, 11px)`;
 	theGrid.style.gridTemplateRows = `repeat(${size}, 11px)`;
@@ -35,6 +33,9 @@ function makeGrid(size) {
 
 // Button that first removes the existing grid
 changeGrid.addEventListener("click", () => {
+	let newSize
 	console.log("Button works");
-	theGrid.remove();
+	let toRemove = document.querySelector(".myGrid");
+	toRemove.remove();
+	makeGrid(25);
 });
