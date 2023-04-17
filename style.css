@@ -25,9 +25,10 @@ body {
   min-height: 100vh; /* Let's me center things appended to body flexbox somehow */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
   align-items: center;
   background-color: black;
+  margin: 0;
 }
 
 #rainbowBtn,
@@ -45,9 +46,17 @@ button {
   background-color: transparent;
   border-radius: 7px;
   font-size: 20px;
-  border-style: ridge;
+  border-style: solid;
   border-color: white;
   margin: 10px;
+  padding: 5px;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
+  transition: 0.25s;
 }
 
 p {
@@ -55,4 +64,17 @@ p {
   font-family: 'Sedgwick Ave Display';
   font-size: 50px;
   margin: 0;
+}
+
+#header {
+  height: 55px;
+  margin-top: 0;
+  border-bottom: 1px solid white;
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+#header p {
+  margin-left: 10px;
+  text-align: center;
 }
