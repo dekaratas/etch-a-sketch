@@ -3,8 +3,10 @@
 // Define default grid size
 console.log("Script loaded");
 let gridSize = 16;
+let rainbowMode = false;
 const myBody = document.querySelector("body");
 const changeGrid = document.querySelector("#sizeBtn");
+const rainMode = document.querySelector("#rainbowBtn");
 
 
 
@@ -23,7 +25,10 @@ function makeGrid(size) {
 		for (let j=0; j<size; j++) {
 			const div = document.createElement("div");
 			div.setAttribute("class", "gridSpace");
-
+			div.addEventListener("mouseover", () => {
+				console.log("I do something");
+				if(rainbowMode == true) div.style.backgroundColor = `rgb(${(Math.floor(Math.random()*256))}, ${(Math.floor(Math.random()*256))}, ${(Math.floor(Math.random()*256))}`;
+			});
 			theGrid.appendChild(div);
 		}
 	}
@@ -45,4 +50,10 @@ changeGrid.addEventListener("click", () => {
 	toRemove.remove();
 	makeGrid(newSize);
 	}
+});
+
+
+// Rainbow Mode button
+rainMode.addEventListener("click", () => {
+	rainbowMode = !rainbowMode;
 });
