@@ -1,5 +1,5 @@
 # Etch-a-Sketch
-# Exercice provided by The Odin Project
+# Exercise provided by The Odin Project
 
 This exercise revolves around creating a grid of adjustable size that functions similiar to an actual Etch A Sketch.
 The individual grid squares are created via JavaScript as opposed to copy-pasting each one into my .html file.
