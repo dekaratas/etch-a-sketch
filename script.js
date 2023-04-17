@@ -16,16 +16,14 @@ makeGrid(gridSize);
 function makeGrid(size) {	
 	let theGrid = document.createElement("div");
 	theGrid.setAttribute("class", "myGrid");
-	theGrid.style.gridTemplateColumns = `repeat(${size}, 11px)`;
-	theGrid.style.gridTemplateRows = `repeat(${size}, 11px)`;
+	theGrid.style.gridTemplateColumns = `repeat(${size}, minmax(0, 1fr))`;
+	theGrid.style.gridTemplateRows = `repeat(${size}, minmax(0, 1fr))`;
 	myBody.appendChild(theGrid);
 	for (let i=0; i<size; i++) {
 		for (let j=0; j<size; j++) {
 			const div = document.createElement("div");
 			div.setAttribute("class", "gridSpace");
-			div.style.width="10px";
-			div.style.height="10px";
-			div.style.border="1px solid black";
+
 			theGrid.appendChild(div);
 		}
 	}
@@ -40,7 +38,7 @@ changeGrid.addEventListener("click", () => {
 	if (newSize != null) {
 	while(newSize<2 || newSize>100) {
 		alert("Grid size must be in the range 2-100");
-		newSize = prompt("What grid size do you prefer");
+		newSize = null;
 	}
 	console.log("Button works");
 	let toRemove = document.querySelector(".myGrid");
