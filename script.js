@@ -7,7 +7,7 @@ let rainbowMode = false;
 const myBody = document.querySelector("body");
 const changeGrid = document.querySelector("#sizeBtn");
 const rainMode = document.querySelector("#rainbowBtn");
-
+const reset = document.querySelector("#resetBtn");
 
 
 
@@ -54,7 +54,16 @@ changeGrid.addEventListener("click", () => {
 });
 
 
-// Rainbow Mode button
+// Rainbow Mode Button
+// Toggles alternating randomized colors
 rainMode.addEventListener("click", () => {
 	rainbowMode = !rainbowMode;
+});
+
+// Reset Button
+// Resets the sketchpad to original gridsize
+reset.addEventListener("click", () => {
+	let toRemove = document.querySelector(".myGrid");
+	toRemove.remove();
+	makeGrid(gridSize);
 });
