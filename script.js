@@ -2,7 +2,7 @@
 // Query Selectors
 // Define default grid size
 console.log("Script loaded");
-let gridSize = 16;
+let gridSize = 64;
 let rainbowMode = false;
 const myBody = document.querySelector("body");
 const changeGrid = document.querySelector("#sizeBtn");
@@ -28,6 +28,7 @@ function makeGrid(size) {
 			div.addEventListener("mouseover", () => {
 				console.log("I do something");
 				if(rainbowMode == true) div.style.backgroundColor = `rgb(${(Math.floor(Math.random()*256))}, ${(Math.floor(Math.random()*256))}, ${(Math.floor(Math.random()*256))}`;
+				if(rainbowMode != true) div.style.backgroundColor = "black";
 			});
 			theGrid.appendChild(div);
 		}
