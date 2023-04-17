@@ -31,12 +31,20 @@ function makeGrid(size) {
 	}
 }
 
-// Button that first removes the existing grid
+// Button that prompts for new grid size
+// Cancel returns to the existing grid
+// Range must be between 2 and 100
+// Then removes the existing grid and replaces it with the new one
 changeGrid.addEventListener("click", () => {
 	let newSize = prompt("What grid size do you prefer?");
+	if (newSize != null) {
+	while(newSize<2 || newSize>100) {
+		alert("Grid size must be in the range 2-100");
+		newSize = prompt("What grid size do you prefer");
+	}
 	console.log("Button works");
 	let toRemove = document.querySelector(".myGrid");
 	toRemove.remove();
 	makeGrid(newSize);
+	}
 });
-
