@@ -5,12 +5,15 @@
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
   grid-gap: 0;
+
+  border: 1px solid white;
+  padding: 10px;
 }
 
 .gridSpace {
 	background-color: white;
 	transition: 0s 180s;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .gridSpace:hover {
@@ -19,8 +22,12 @@
 }
 
 body {
+  min-height: 100vh; /* Let's me center things appended to body flexbox somehow */
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
 #rainbowBtn,
@@ -30,5 +37,22 @@ body {
 
 .buttons {
   display: flex;
-  flex-direction: column;
+}
+
+button {
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: white;
+  background-color: transparent;
+  border-radius: 7px;
+  font-size: 20px;
+  border-style: ridge;
+  border-color: white;
+  margin: 10px;
+}
+
+p {
+  color: white;
+  font-family: 'Sedgwick Ave Display';
+  font-size: 50px;
+  margin: 0;
 }
