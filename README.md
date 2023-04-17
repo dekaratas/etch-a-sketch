@@ -1,4 +1,4 @@
-# Etch-a-Sketch
+# Etch A Sketch
 # Exercise provided by The Odin Project
 
 This exercise revolves around creating a grid of adjustable size that functions similiar to an actual Etch A Sketch.
