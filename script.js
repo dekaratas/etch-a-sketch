@@ -33,9 +33,10 @@ function makeGrid(size) {
 
 // Button that first removes the existing grid
 changeGrid.addEventListener("click", () => {
-	let newSize
+	let newSize = prompt("What grid size do you prefer?");
 	console.log("Button works");
 	let toRemove = document.querySelector(".myGrid");
 	toRemove.remove();
-	makeGrid(25);
+	makeGrid(newSize);
 });
+
