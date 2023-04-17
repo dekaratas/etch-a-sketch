@@ -2,7 +2,7 @@
 // Query Selectors
 // Define default grid size
 console.log("Script loaded");
-let gridSize = 64;
+let gridSize = 32;
 let rainbowMode = false;
 const myBody = document.querySelector("body");
 const changeGrid = document.querySelector("#sizeBtn");
