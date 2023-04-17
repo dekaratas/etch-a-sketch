@@ -4,3 +4,13 @@
   grid-template-rows: repeat(16, 11px);
   grid-gap: 0;
 }
+
+.gridSpace {
+	background-color: white;
+	transition: 0s 180s;
+}
+
+.gridSpace:hover {
+	background-color: black;
+	transition: 0.25s;
+}
