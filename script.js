@@ -10,7 +10,6 @@ const rainMode = document.querySelector("#rainbowBtn");
 const reset = document.querySelector("#resetBtn");
 
 
-
 // Create new grid with default values on page load
 makeGrid(gridSize);
 
